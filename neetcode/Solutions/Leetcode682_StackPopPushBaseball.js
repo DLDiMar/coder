@@ -1,43 +1,45 @@
-/**
- * @param {string[]} operations
- * @return {number}
- */
-
-var sumArray = function (array) {
-    let sum = 0;
-    return array.forEach(x => {
-        sum += x;
-    });
-}
+// Solve an array by traversing origianl 'operations' array for commands
+// Note the push and pop methods available in js for stacks/arrays
+// Assume C, D, and + will never start in first array index
 
 var calPoints = function(operations) {
-    // sum at the very end whole array
-    // get a running variable return of an int
-    // Want O(1) operations each time for push, pop, and peek
-    // Total O(2n) ( aka O(n) )target speed, since have to pop n times for sum
-    let record = new Array(operations.length);
-    let sum = 0;
-    
-    if (operations.length = 0) { return 0; }
-    
-    // traverse operations array and do what it needs to do
-    // if ops[i] is D, take ops value and insert 2*value
-    // if ops[i] is C, pop last record out
-    // if ops[i] is +, add last value + 2nd last value of record
-    // else, push onto the record array
-    for (let i = 0; i < operations.length; i++) {
-        if (operations[i] === "D") {
-            record.push(operations[i] * 2);
+    // declare sume for return
+    // declare record array/stack to do operations on
+    // For each operation (use for loop):
+    //    if op = c, pop the record value from the running sum
+    //    if op = d, double the record value at index and push onto record. Don't forget to add to running sum.
+    //    if op = +, add two last index values of record, then push onto record. Don't forget to add to the running sum.
+    //    Anything else, push onto the record stack and add it to the running sum.
+    // Return running sum
+    let runningSum = 0;
+    const record = [];
+    for(const o of operations) {
+        if(o === 'C') {
+            runningSum -= record.pop();
+            continue;
         }
-        if (operations[i] === "C") {
-            record.pop();
+        if(o === 'D') {
+            const val = record[record.length - 1] * 2;
+            record.push(val);
+            runningSum += val;
+            continue;
         }
-        if (operations[i] === "+") {
-            record.push(record[record.length-1] + record[record.length-2]);
+        if(o === '+') {
+            const val = record[record.length - 1] + record[record.length - 2];
+            record.push(val);
+            runningSum += val;
+            continue;
         }
-        else {
-            record.push(operations[i]);
-        }
+        record.push(+o);
+        runningSum += +o;
     }
-    return sumArray(record);
+    return runningSum;
 };
+
+let operations = ["5","-2","4","C","D","9","+","+"]
+let expectedOutput = 27;
+
+let k = calPoints2(operations);
+
+console.log("Expected Value: " + expectedOutput);
+console.log("Actual Output: " + k);
