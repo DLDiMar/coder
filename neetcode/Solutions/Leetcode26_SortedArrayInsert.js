@@ -1,3 +1,16 @@
+/* 
+Time Complexity: O(n)
+The algorithm uses two pointers, left and right, and iterates through the array once with the while loop.
+The loop condition while (right < nums.length) ensures that each element is processed once.
+The operations inside the loop (comparisons, updates) are constant time.
+Therefore, the overall time complexity is linear, O(n), where n is the length of the input array.
+
+Space Complexity: O(1)
+The algorithm uses a constant amount of extra space regardless of the size of the input array.
+The extra space is used for the pointers left and right, as well as a few constant variables (leftVal, rightVal, isEqual).
+The space complexity is independent of the input size, making it O(1).
+*/
+
 // Leetcode 26: Remove Duplicates from Sorted Array
 // Ascending order array, need to keep same-size array but remove duplicates
 

@@ -1,3 +1,17 @@
+/*
+
+Time Complexity: O(n)
+The algorithm uses a single for loop to iterate through each operation in the operations array exactly once.
+The operations inside the loop are basic arithmetic operations, condition checks, and array manipulations, all of which take constant time.
+Therefore, the overall time complexity is linear, O(n), where n is the length of the input operations array.
+
+Space Complexity: O(n)
+The space complexity is determined by the size of the record array.
+In the worst case, the record array may store all the numerical values from the operations array.
+Therefore, the space complexity is proportional to the length of the input operations array, O(n).
+
+*/
+
 // Solve an array by traversing origianl 'operations' array for commands
 // Note the push and pop methods available in js for stacks/arrays
 // Assume C, D, and + will never start in first array index

@@ -1,3 +1,16 @@
+/* 
+Time Complexity: O(n)
+The algorithm uses two pointers, leftPtr and rightPtr, and iterates through the array once with the while loop.
+The loop condition while (leftPtr > -1) ensures that each element is processed once.
+Inside the loop, there are constant-time operations, such as comparisons and swaps.
+Therefore, the overall time complexity is linear, O(n), where n is the length of the input array.
+
+Space Complexity: O(1)
+The algorithm uses a constant amount of extra space regardless of the size of the input array.
+The extra space is used for the pointers leftPtr, rightPtr, and a few constant variables (temp).
+The space complexity is independent of the input size, making it O(1).
+*/
+
 // Remove a specific value inside an array, keeping the same size at least.
 // Don't forget edge cases!
 // EC1: 0-size array: return 0
