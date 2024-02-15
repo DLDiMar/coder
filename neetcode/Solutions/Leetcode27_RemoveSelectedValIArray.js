@@ -1,3 +1,16 @@
+/*
+Time Complexity: O(n^2)
+The primary reason for the time complexity is the use of the splice method inside the loop. When splice is called, it may take O(n) time to shift the elements after the removal point to fill the gap.
+In each iteration of the loop, if an element is removed using splice, the subsequent shifting of elements may cause the entire array to be traversed multiple times.
+Therefore, the overall time complexity is O(n^2), where n is the length of the input array.
+
+Space Complexity: O(1)
+The space complexity is constant because the algorithm doesn't use additional data structures that scale with the input size.
+However, keep in mind that the splice method modifies the array in place, and it may use extra memory for temporary storage during the element shifting.
+Despite this, the space used by splice is not proportional to the input size, so the space complexity is considered O(1).
+
+*/
+
 var removeElement = function(nums, val) {
     let k = 0;
     
