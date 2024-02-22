@@ -1,0 +1,6 @@
+   version: "3.9"
+   services:
+     spring-boot-app:
+       image: spring-boot-module:latest
+       ports:
+         - "8080:8080" 
