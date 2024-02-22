@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="payment_type">Payment Type:</label>
+        <select id="payment_type" name="payment_type">
+            <option value="credit_card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+        </select><br><br>
+        <label for="third_party_pay_plugin">Third-Party Payment Plugin:</label>
+        <input type="text" id="third_party_pay_plugin" name="third_party_pay_plugin"><br><br>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount"><br><br>
+        <input type="submit" value="Place Order">
+    </form>
+</body>
+</html>
