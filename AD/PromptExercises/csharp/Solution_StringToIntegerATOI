@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace 
+{
+    public class Solution_StringToIntegerATOI
+    {
+        public int MyAtoi(string s) {
+            int index = 0;
+            int sign = 1;
+            int result = 0;
+            int maxInt = 2147483647;
+            int minInt = -2147483648;
+
+            // Skip whitespaces
+            while (index < s.Length && s[index] == ' ')
+                index++;
+
+            // Check for sign
+            if (index < s.Length && (s[index] == '-' || s[index] == '+')) {
+                sign = (s[index++] == '-') ? -1 : 1;
+            }
+
+            // Convert digits to integer
+            while (index < s.Length && char.IsDigit(s[index])) {
+                int digit = s[index++] - '0';
+                if (result > maxInt / 10 || (result == maxInt / 10 && digit > maxInt % 10)) {
+                    return sign == 1 ? maxInt : minInt;
+                }
+
+                result = result * 10 + digit;
+            }
+
+            // Apply sign
+            result *= sign;
+
+            // Clamp the result
+            return Math.Max(Math.Min(result, maxInt), minInt);
+        }
+    }
+}
