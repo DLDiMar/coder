@@ -1,0 +1,74 @@
+[
+    {
+        "id": 9,
+        "show_name": "Aaahh!!! Real Monsters",
+        "number_minutes_all_shows": 420,
+        "producing_company": "Savage Studios",
+        "lead_writer": "Steve Marmel",
+        "release_date": "1994-09-24"
+    },
+    {
+        "id": 1,
+        "show_name": "Animaniacs",
+        "number_minutes_all_shows": 2340,
+        "producing_company": "Warner Bros.",
+        "lead_writer": "Paul Dini",
+        "release_date": "1993-09-13"
+    },
+    {
+        "id": 2,
+        "show_name": "Bobby's World",
+        "number_minutes_all_shows": 520,
+        "producing_company": "Nickelodeon",
+        "lead_writer": "Howie Mandel",
+        "release_date": "1990-10-27"
+    },
+    {
+        "id": 5,
+        "show_name": "Doug",
+        "number_minutes_all_shows": 460,
+        "producing_company": "Nickelodeon",
+        "lead_writer": "William Hanna and Joseph Barbera",
+        "release_date": "1991-08-11"
+    },
+    {
+        "id": 4,
+        "show_name": "Ren & Stimpy",
+        "number_minutes_all_shows": 260,
+        "producing_company": "Spümcø",
+        "lead_writer": "John Kricfalusi",
+        "release_date": "1991-08-11"
+    },
+    {
+        "id": 3,
+        "show_name": "Rocko's Modern Life",
+        "number_minutes_all_shows": 495,
+        "producing_company": "United Video Concepts",
+        "lead_writer": "Joe Murray",
+        "release_date": "1993-09-09"
+    },
+    {
+        "id": 6,
+        "show_name": "Rugrats",
+        "number_minutes_all_shows": 2940,
+        "producing_company": "Klasky-Csupo",
+        "lead_writer": "Arnold Drake",
+        "release_date": "1991-08-11"
+    },
+    {
+        "id": 7,
+        "show_name": "The Simpsons",
+        "number_minutes_all_shows": 2210,
+        "producing_company": "Gracie Films",
+        "lead_writer": "Matt Groening",
+        "release_date": "1989-12-17"
+    },
+    {
+        "id": 8,
+        "show_name": "Tom and Jerry",
+        "number_minutes_all_shows": 1425,
+        "producing_company": "Hanna-Barbera",
+        "lead_writer": "William Hanna and Joseph Barbera",
+        "release_date": "1940-02-10"
+    }
+]
