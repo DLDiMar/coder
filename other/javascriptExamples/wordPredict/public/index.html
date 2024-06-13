@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Predictive Text</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #input-container {
+      position: relative;
+    }
+    #suggestions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f0f0f0;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    #suggestions ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    #suggestions li {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    #suggestions li:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="input-container">
+    <input id="input" type="text" />
+    <div id="suggestions"></div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
